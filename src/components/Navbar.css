@@ -1,0 +1,145 @@
+/* Navbar.css */
+.navbar {
+    background: #fff; /* White background */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 24px;
+    position: relative;
+}
+
+.navbar-breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.navbar-link {
+    color: #3b2d8d; /* Blue text */
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+}
+
+.navbar-search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    font-size: 24px;
+    color: #3b2d8d; /* Blue icon color */
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+.nav-item {
+    height: 60px; /* Ensure each item takes up full height */
+}
+
+.nav-links {
+    color: #3b2d8d; /* Blue text */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem; /* Adjust padding to your needs */
+    height: 100%;
+}
+
+.nav-links:hover {
+    border-bottom: 4px solid #01bf71;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar-container {
+        padding: 0;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: #3b2d8d;
+    }
+
+    .nav-menu {
+        padding-bottom: 14px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        background: #fff;
+    }
+
+    .nav-menu.active {
+        background: #fff;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover {
+        border: none;
+    }
+}
